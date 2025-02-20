@@ -1,0 +1,14 @@
+{
+  "name": "auto-desafio",
+  "version": "1.0.0",
+  "author": "Alexander Ribeiro",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.3"
+  }
+}
