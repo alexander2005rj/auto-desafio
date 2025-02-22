@@ -1,0 +1,7 @@
+# Cypress: vídeos, screenshots e reports gerados durante os testes
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+
+# Cobertura de testes
+coverage/
