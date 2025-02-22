@@ -2,7 +2,7 @@
 
 Desafio de automação web e API utilizando Cypress.
 
-Este projeto foi desenvolvido para praticar a automação de testes utilizando a ferramenta [Cypress](https://www.cypress.io/), executando testes tanto de interface web quanto de API.
+Este projeto foi desenvolvido para praticar a automação de testes utilizando a ferramenta [Cypress](https://www.cypress.io/), executando testes tanto de interface web quanto de API (por intermédio de interceptação de rotas).
 
 ---
 
