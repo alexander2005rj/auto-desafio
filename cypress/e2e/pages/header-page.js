@@ -24,9 +24,7 @@ class HeaderPage {
     checkHeaderPageElements() {
         cy.get(this.elements.imgFiatLogo).scrollIntoView().should('be.visible').and('have.attr', 'title').and('include', this.labels.titleImgFiatLogo)
         cy.get(this.elements.imgDealerLogo).scrollIntoView().should('be.visible').and('have.attr', 'title').and('include', this.labels.titleImgDealerLogo)
-        cy.get(this.elements.selectLocal).scrollIntoView().find('span').invoke('text').then((nomeLocal) => {
-            expect(nomeLocal.trim()).to.equal(this.labels.textSelectLocal.trim())
-        })
+        cy.get(this.elements.selectLocal).contains(this.labels.textSelectLocal).should('be.visible')
         cy.get(this.elements.btnWhatsAppHeader).scrollIntoView().should('be.visible').and('have.attr', 'aria-label').and('include', this.labels.ariaLabelWhatsApp)
         cy.get(this.elements.btnTelefoneHeader).scrollIntoView().should('be.visible').and('have.attr', 'aria-label').and('include', this.labels.ariaLableTelefones)
     }

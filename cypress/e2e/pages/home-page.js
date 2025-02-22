@@ -32,12 +32,13 @@ class HomePage {
 
         cy.visit(this.elements.suffixUrlHome)
         
-        // Esperas
+        // Esperas das rotas
         cy.wait('@postOffersSearch').its('response.statusCode').should('eq', 200)
         cy.wait('@postBam').its('response.statusCode').should('eq', 200)
         
         // FIXME: A rota /offers estava com erro (500) durante o desafio
         // cy.wait('@getOffers').its('response.statusCode').should('eq', 200)
+        return this
     }
 
     checkHomePageElements() {
