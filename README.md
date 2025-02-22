@@ -107,7 +107,7 @@ auto-desafio/
 ├── .nvmrc                      # Especifica a versão do Node.js a ser utilizada no projeto.
 ├── .prettierignore             # Indica quais arquivos e pastas devem ser ignorados pelo Prettier ao formatar o código.
 ├── cypress.config.js           # Arquivo de configuração do Cypress
-├── package-lock.json           # Scripts e dependências do projeto
+├── package-lock.json           # Dependências do projeto
 ├── package.json                # Scripts e dependências do projeto
 └── README.md                   # Documentação do projeto
 ```
