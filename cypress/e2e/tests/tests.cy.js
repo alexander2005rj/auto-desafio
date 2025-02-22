@@ -1,31 +1,25 @@
 /// <reference types="cypress" />
 
 import homePage from "../pages/home-page";
+import novosVeiculosPage from "../pages/novos-veiculos-page";
 
 context('Actions', () => {
     beforeEach(() => {
-        cy.clearAllCookies();
-        cy.clearAllLocalStorage();
-        cy.clearAllSessionStorage();
+        cy.clearAllCookies()
+        cy.clearAllLocalStorage()
+        cy.clearAllSessionStorage()
     })
 
     it('Acessar home para selecionar opcao de novos veiculos', () => {
-        // Dado que estou na home
         cy.goToHomePage()
-        
-        // Quando clico na sessão de “novos” no header
-
-        // Então sou direcionado para listagem de veículos novos 
-
+        // cy.goToNewVehicles()
     })
 
     it.skip('Selecionar um veiculo dentro da listagem de veículos novos', () => {
-        // Listagem URL ==> /novos
-        // Breadcrumb da listagem ==>  " Novos "
+        cy.goToNewVehicles()
+        novosVeiculosPage.clickVeiculoDesejado('Uno 2021')
+        cy.wait(1000)
         
-        // Dois itens com o mesmo a href e h3
-        // Dado que estou na listagem de veículos novos 
-        // Quando clico em algum veículo listado 
         // Então sou direcionado a interna do veículo
     })
 

@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
-class NovosVeiculos {
+import headerPage from "./header-page"
+
+class VeiculoSelecionadoPage {
     // Mapeamento de elementos da página
     elements = {
 
@@ -12,12 +14,14 @@ class NovosVeiculos {
     }
 
     // Ações da página
-    visitNovosVeiculosPage() {
+    visiVeiculoSelecionadoPage() {
         
     }
 
     checkNovosVeiculosPageElements() {
 
+
+        headerPage.checkHeaderPageElements();
     }
 
     clickVeiculo() {
@@ -25,4 +29,4 @@ class NovosVeiculos {
     }
 }
 
-export default new NovosVeiculos()
+export default new VeiculoSelecionadoPage()
