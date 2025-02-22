@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-import veiculoSelecionadoPage from "../pages/veiculo-selecionado-page";
 let faker = require("faker-br");
 
 context("Actions", () => {
@@ -19,11 +18,14 @@ context("Actions", () => {
   });
 
   it("Preencher o formulário - lead - do veiculo desejado", () => {
+    // Criando contato (telefone) válido
+    const formatTelephone = `${faker.random.number({ min: 11, max: 91 })}${faker.random.number({ min: 911111111, max: 999999999 })}`;
+
     // Criando objeto para lead
     let obj = {
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
       email: faker.internet.email(),
-      telephone: faker.phone.phoneNumber(),
+      telephone: formatTelephone,
       cpf: faker.br.cpf(),
     };
 

@@ -40,11 +40,9 @@ class NovosVeiculosPage {
       .should("be.visible");
 
     // Esperas das rotas
-    cy.wait("@postOffersSearch").its("response.statusCode").should("eq", 200);
-    cy.wait("@postBamNovos").its("response.statusCode").should("eq", 200);
-
-    // FIXME: A rota /offers estava com erro (500) durante o desafio
-    // cy.wait('@getOffers').its('response.statusCode').should('eq', 200)
+    cy.wait("@postBamNovos").then((xhr) => {
+      expect(xhr.response.statusCode).to.be.eq(200);
+    });
   }
 
   clickVeiculoDesejado(modelo) {

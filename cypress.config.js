@@ -5,6 +5,7 @@ const {
 } = require("cypress-mochawesome-reporter/lib");
 
 module.exports = defineConfig({
+  defaultCommandTimeout: 5000,
   requestTimeout: 5000,
   responseTimeout: 5000,
   reporter: "cypress-mochawesome-reporter",

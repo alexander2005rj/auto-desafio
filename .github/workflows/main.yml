@@ -9,24 +9,24 @@ on:
       - main
 
 jobs:
- run-on-chrome:
+  run-on-chrome:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Test Repository
         uses: actions/checkout@v4
-      
+
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
-      
+
       - name: Run Chrome Tests
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
           headed: true
           publish-summary: true
-      
+
       - name: Chrome - Upload Report
         if: always()
         uses: actions/upload-artifact@v4
