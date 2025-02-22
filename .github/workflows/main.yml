@@ -31,6 +31,32 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Test Report
+          name: Chrome - Test Report
+          path: cypress/reports
+          if-no-files-found: ignore
+  
+  run-on-firefox:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Test Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Firefox
+        uses: browser-actions/setup-firefox@v1
+        with:
+          firefox-version: latest
+      
+      - name: Run Firefox Tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: firefox
+          headed: true
+          publish-summary: true
+
+      - name: Firefox - Upload Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Firefox - Test Report
           path: cypress/reports
           if-no-files-found: ignore
