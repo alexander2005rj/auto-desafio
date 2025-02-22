@@ -10,15 +10,15 @@ context('Actions', () => {
         cy.clearAllSessionStorage()
     })
 
-    it.skip('Acessar home para selecionar opcao de novos veiculos', () => {
+    it('Acessar home para selecionar opcao de novos veiculos', () => {
         cy.goToNewVehicles()
     })
 
-    it.skip('Selecionar um veiculo dentro da listagem de veículos novos', () => {
+    it('Selecionar um veiculo dentro da listagem de veículos novos', () => {
         cy.goToDesiredVehicle('Uno 2021')
     })
 
-    it.skip('Preencher o formulário - lead - do veiculo desejado', () => {
+    it('Preencher o formulário - lead - do veiculo desejado', () => {
         // Criando objeto para lead
         let obj = {
             name: `${faker.name.firstName()} ${faker.name.lastName()}`,
