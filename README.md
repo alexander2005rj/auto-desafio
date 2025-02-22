@@ -35,7 +35,13 @@ Antes de iniciar, certifique-se de ter instalado:
 - [faker-br](https://www.npmjs.com/package/faker-br)
 - [prettier](https://www.npmjs.com/package/prettier)
 
-Após clonar o repositório, instale as dependências executando:
+Após clonar o repositório, entre na pasta criada: 
+
+```bash
+cd auto-desafio/
+```
+
+Agora, instale as dependências executando:
 
 ```bash
 npm install
